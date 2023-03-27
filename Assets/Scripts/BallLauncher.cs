@@ -5,6 +5,8 @@ namespace DefaultNamespace
 {
     public class BallLauncher : MonoBehaviour
     {
+        public event Action OnLaunched;
+        
         [SerializeField] private float _launchSpeed = 1f;
         [SerializeField] private Rigidbody2D _ball;
         [SerializeField] private AimInputProviderBase _inputProvider;
@@ -33,6 +35,8 @@ namespace DefaultNamespace
             // запускаем шар с полученной силой
             _ball.transform.parent = null;
             _ball.AddForce(shootDirection, ForceMode2D.Impulse);
+            
+            OnLaunched?.Invoke();
         }
 
         // private void OnDrawGizmos()
