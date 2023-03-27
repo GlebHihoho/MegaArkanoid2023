@@ -9,7 +9,12 @@ namespace DefaultNamespace
         
         private void Update()
         {
+            // Повернуться в сторону прицела
+            Vector3 targetPoint = _aimInputProvider.GetAimTarget();
             
+            transform.LookAt(targetPoint);
+
+            // Следить за позицией игрока
         }
     }
 }
