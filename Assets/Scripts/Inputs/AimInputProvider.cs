@@ -3,18 +3,18 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class AimInputProvider : IAimInputProvider
+    public class AimInputProvider : AimInputProviderBase
     {
-        public event Action OnLaunch;
+        public override event Action OnLaunch;
         private Vector3 _aimTarget;
 
-        public void OnUpdate()
+        public void Update()
         {
             ProcessLaunchInput();
             ProcessAimInput();
         }
 
-        public Vector2 GetAimTarget()
+        public override Vector2 GetAimTarget()
         {
             return _aimTarget;
         }
