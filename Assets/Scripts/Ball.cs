@@ -5,6 +5,8 @@ namespace DefaultNamespace
 {
     public class Ball : MonoBehaviour
     {
+        [SerializeField] private BlockManager _blockManager;
+        
         private void OnCollisionEnter2D(Collision2D collision)
         {
             // var otherBlock = collision.transform.GetComponent<Block>();
@@ -13,7 +15,7 @@ namespace DefaultNamespace
             // то же самое
             if (collision.transform.TryGetComponent<Block>(out Block otherBlock))
             {
-                // разрушить блок
+                _blockManager.DamageBlock(otherBlock);
             }
         }
     }
