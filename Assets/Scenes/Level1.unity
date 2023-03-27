@@ -286,8 +286,9 @@ GameObject:
   - component: {fileID: 248471111}
   - component: {fileID: 248471112}
   - component: {fileID: 248471113}
+  - component: {fileID: 248471114}
   m_Layer: 0
-  m_Name: Border
+  m_Name: BorderKillPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248471110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.72, z: 0}
+  m_LocalPosition: {x: 0, y: -12.16, z: 0}
   m_LocalScale: {x: 7.246926, y: 1.1586949, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -386,6 +387,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.85, y: 4.85}
   m_EdgeRadius: 0
+--- !u!114 &248471114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248471110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eec30bbd83441b3b20aa3778b6fd2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &312555696
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,8 +650,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563251318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.5, y: 12.0891, z: 0}
-  m_LocalScale: {x: 1.5713749, y: 8.194174, z: 1}
+  m_LocalPosition: {x: 13.5, y: 9.5048, z: 0}
+  m_LocalScale: {x: 1.5713749, y: 9.260236, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 744274819}
@@ -998,8 +1011,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787945689}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.6, y: 12.0891, z: 0}
-  m_LocalScale: {x: 1.5713749, y: 8.194174, z: 1}
+  m_LocalPosition: {x: -13.6, y: 9.5048, z: 0}
+  m_LocalScale: {x: 1.5713749, y: 9.260236, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 744274819}
@@ -1692,6 +1705,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3074830716673529095, guid: 50aad15f6fbe7477cbcc2e2b482ce52e, type: 3}
   m_PrefabInstance: {fileID: 1626897613}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1676740570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1676740571}
+  - component: {fileID: 1676740572}
+  m_Layer: 0
+  m_Name: BallsManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1676740571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676740570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1810723594}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1676740572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676740570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec12c9cc31884902b7e41620e3956086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1699149217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1856,6 +1913,7 @@ Transform:
   - {fileID: 946059254}
   - {fileID: 458521689}
   - {fileID: 983431890}
+  - {fileID: 1676740571}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2128,6 +2186,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3072744800427339637, guid: 815e92821808e4ee980c366802036f25, type: 3}
+      propertyPath: _ballsManager
+      value: 
+      objectReference: {fileID: 1676740572}
     - target: {fileID: 3072744800427339637, guid: 815e92821808e4ee980c366802036f25, type: 3}
       propertyPath: _blockManager
       value: 
