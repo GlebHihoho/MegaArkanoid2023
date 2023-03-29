@@ -11,8 +11,8 @@ namespace DefaultNamespace
         {
             // Повернуться в сторону прицела
             Vector3 targetPoint = _aimInputProvider.GetAimTarget();
-            
-            transform.LookAt(targetPoint);
+            //
+            // transform.up = targetPoint - transform.position;
 
             // Следить за позицией игрока
         }
