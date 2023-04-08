@@ -52,6 +52,11 @@ namespace DefaultNamespace
             }
         }
 
+        public int GetBallsCount()
+        {
+            return _ballsPerLaunch;
+        }
+
         // private void OnDrawGizmos()
         // {
         //     if (!Application.isPlaying) return;

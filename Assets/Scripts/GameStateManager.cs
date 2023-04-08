@@ -5,17 +5,27 @@ namespace DefaultNamespace
 {
     public class GameStateManager : MonoBehaviour
     {
+        private bool gameResult;
+
         public event Action OnWin;
         public event Action OnLose;
         
         public void Win()
         {
-            OnWin?.Invoke();
+            if (!gameResult)
+            {
+                OnWin?.Invoke();
+                gameResult = true;
+            }
         }
 
         public void Lose()
         {
-            OnLose?.Invoke();
+            if (!gameResult)
+            {
+                OnLose?.Invoke();
+                gameResult = true;
+            }
         }
     }
 }
